@@ -17,10 +17,10 @@
 </H1>
 What Arena are you going to tonight?
 
-
+<%= select_tag(:City_id, options_for_select([['Bars', 'bars'],['Restaurants', 'restaurants'],['Ice Cream', 'ice cream']])) %>
 
 <%= form_tag(controller: "venues", action: "search", method: "get") do %>
-  <%= label_tag(:venue, "Find deals near the arena:") %>
+  <%= label_tag(:venue, "Find deals near the arena of your choice:") %>
   <%= text_field_tag(:venue) %>
   <%= submit_tag("Search") %>
 <% end %>
