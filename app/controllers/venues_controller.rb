@@ -29,6 +29,7 @@ class VenuesController < ApplicationController
 			near: search_params, 
 			intent: "browse", 
 			radius: "600", 
+			v: 20131016,
 			query: "bar" ).venues.each do |venue|
 				if venue.specials['count'] > -1
 					@special_venues << venue
