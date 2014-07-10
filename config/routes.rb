@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
 root 'venues#index'
+get 'search' => 'venues#search'
 
-
-
+post 'search' => 'venues#search'
 
 
 

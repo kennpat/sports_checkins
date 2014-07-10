@@ -8,12 +8,28 @@
 </head>
 <body>
 
+
+
+
+
 <H1>
 	SportsCheckins.com!
 </H1>
+What Arena are you going to tonight?
 
+
+
+<%= form_tag(controller: "venues", action: "search", method: "get") do %>
+  <%= label_tag(:venue, "Find deals near the arena:") %>
+  <%= text_field_tag(:venue) %>
+  <%= submit_tag("Search") %>
+<% end %>
 
 <%= yield %>
+
+<% flash.each do |name, msg| -%>
+	<%= content_tag :div, msg, class: name %>
+<% end %>
 
 </body>
 </html>
